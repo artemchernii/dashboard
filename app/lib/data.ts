@@ -189,7 +189,7 @@ export async function fetchCustomers() {
       ORDER BY name ASC
     `;
 
-    const customers = data.rows;
+    const customers: CustomerField[] = data.rows;
     return customers;
   } catch (err) {
     console.error('Database Error:', err);
